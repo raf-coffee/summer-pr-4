@@ -20,7 +20,12 @@ function App() {
   return (
     <main className="max-w-7xl mx-auto flex flex-col items-center min-h-dvh">
       <div>
-        <button onClick={() => setShowModal(true)}>Добавить задачу</button>
+        <button
+          onClick={() => setShowModal(true)}
+          className="bg-white px-3 py-2 mt-6 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 rounded-md"
+        >
+          Добавить задачу
+        </button>
         {showModal &&
           createPortal(
             <Form showModal={showModal} setShowModal={setShowModal} />,
@@ -49,7 +54,7 @@ function App() {
                 </div>
                 <div className="flex items-center">
                   <button onClick={() => handleDeleteTodo(todo.id)}>
-                    Delete
+                    Удалить
                   </button>
                 </div>
               </li>
